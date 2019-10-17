@@ -18,7 +18,7 @@ body{
   width: 50%;
   height: 20%;
   color: rgb(239, 219, 170);
-  display: grid;
+  display: block;
   padding-left: 22px;
   padding-top: 22px;
 
@@ -136,5 +136,10 @@ a:active {
     animation-duration: 2s;
     animation-name: bounceIn;
   }
+}
+
+.ARRAW{
+  font-size: 40px;
+  color: rgb(239, 219, 170);
 }
 

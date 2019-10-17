@@ -31,9 +31,9 @@ function Microne(parent_el) {
 	_apply_style(this.play_button, {
 		cursor: 'pointer',
 		fontFamily: 'monospace',
-		fontSize: '14px',
+		fontSize: '7px',
 		position: 'absolute',
-		top: '55%',
+		top: '62%',
 		left: '50%',
 		width: '25px',
 		height: '25px',

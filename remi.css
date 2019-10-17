@@ -1,0 +1,94 @@
+/* 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ISSUES 
+
+- Button size difference when border-width = 0 px
+  > Border-color: transparent; does not work as expected
+
+- Button size difference when adding the gradient if background position: left / right / bottom.
+
+- Arbitrary padding values to center the text in Button if background position: left / right / bottom
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
+.button1.btn-secondary.btn.btn-sm{
+
+  /* no-repeat disables the pattern (mozaic) effect. */
+  background: repeating-linear-gradient(45deg, #C8F6DF, #C8F6DF 5px, #99E6BF 5px, #99E6BF 10px) no-repeat;
+
+  /* Changing the background sets the default background-color to transparent. Setting it back to grey. */
+  background-color: rgb(108, 117, 125);
+
+  /* When the background gradient is set left or right, the text isn't centred anymore. Adding padding to center the text. */
+  /* Background size sets the size of the gradient. background-size: X_AXIS Y_AXIS */
+  /* This padding value is abritrary. */
+  background-size: 20% 100%;
+  background-position: right;
+  padding-right: 20px;
+
+  /* Uncomment the line below to remove the grey border. */
+  /* border-width: 0px; */
+}
+
+.button2.btn-secondary.btn.btn-sm{
+
+  /* no-repeat disables the pattern (mozaic) effect. */
+  background: repeating-linear-gradient(45deg, #C8F6DF, #C8F6DF 5px, #99E6BF 5px, #99E6BF 10px) no-repeat;
+
+  /* Changing the background sets the default background-color to transparent. Setting it back to grey. */
+  background-color: rgb(108, 117, 125);
+
+  /* When the background gradient is set left or right, the text isn't centred anymore. Adding padding to center the text. */
+  /* Background size sets the size of the gradient. background-size: X_AXIS Y_AXIS */
+  /* This padding value is abritrary. */
+  background-size: 20% 100%;
+  background-position: left;
+  padding-left: 20px;
+
+  /* Remove the line below to add the grey border. */
+  border-width: 0px;
+}
+
+.button3.btn-secondary.btn.btn-sm{
+
+  /* no-repeat disables the pattern (mozaic) effect. */
+  background: repeating-linear-gradient(45deg, #C8F6DF, #C8F6DF 5px, #99E6BF 5px, #99E6BF 10px) no-repeat;
+
+  /* Changing the background sets the default background-color to transparent. Setting it back to grey. */
+  background-color: rgb(108, 117, 125);
+
+  /* Background size sets the size of the gradient. background-size: X_AXIS Y_AXIS */
+  background-size: 100% 20%;
+  background-position: top;
+
+  /* Uncomment the line below to remove the grey border. */
+  /* border-width: 0px; */
+}
+
+.button4.btn-secondary.btn.btn-sm{
+
+  /* no-repeat disables the pattern (mozaic) effect. */
+  background: repeating-linear-gradient(45deg, #C8F6DF, #C8F6DF 5px, #99E6BF 5px, #99E6BF 10px) no-repeat;
+
+  /* Changing the background sets the default background-color to transparent. Setting it back to grey. */
+  background-color: rgb(108, 117, 125);
+
+  /* Background size sets the size of the gradient. background-size: X_AXIS Y_AXIS */
+  background-size: 100% 20%;
+  background-position: bottom;
+
+  /* Remove the line below to add the grey border. */
+  border-width: 0px;
+}
+
+
+
+
+
+p {
+  font-size: 10px !important;
+}
+
