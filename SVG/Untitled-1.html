@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+  .center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+</style>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="cssfile.css" />
+</head>
+
+<body>
+
+  <div>
+    <svg>
+
+      <defs>
+        <pattern id="pattern" width="12" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45 50 50)">
+          <line stroke="#EE584C" stroke-width="12px" y2="10" />
+        </pattern>
+
+        <filter id="filter" filterUnits="userSpaceOnUse" x="-5" y="-5" height="200" width="2000">
+          <feTurbulence baseFrequency="0.2" numOctaves="3" type="fractalNoise" />
+          <feDisplacementMap scale="3" xChannelSelector="R" in="SourceGraphic" />
+        </filter>
+      </defs>
+
+      <circle cx="50" cy="50" r="50" fill="url(#pattern)" opacity="0.4" stroke="none" stroke-width="2px"
+        style="filter:url(#filter)">
+
+    </svg>
+    <hr>
+    <svg>
+      <defs>
+        <filter id="filter2" filterUnits="userSpaceOnUse" x="-5" y="-5" height="200" width="2000">
+          <feTurbulence baseFrequency="0.2" numOctaves="3" type="fractalNoise" />
+          <feDisplacementMap scale="1" xChannelSelector="R" in="SourceGraphic" />
+        </filter>
+        <pattern id="myPattern" x="0" y="0" width="5" height="5" patternUnits="userSpaceOnUse">
+          <!-- start pattern-->
+          <circle cx="2" cy="2" r="1" style="stroke: none; fill: #3BC359" />
+          <!-- end pattern -->
+        </pattern>
+
+      </defs>
+      <rect width="100" height="100" style="fill:url(#myPattern);stroke-width:3;stroke:none;filter:url(#filter2)"
+        transform="translate(75,00), rotate(45)" />
+    </svg>
+    <hr>
+
+    <svg>
+      <defs>
+        <filter id="filter3" filterUnits="userSpaceOnUse" x="-5" y="-5" height="200" width="2000">
+          <feTurbulence baseFrequency="0.2" numOctaves="3" type="fractalNoise" />
+          <feDisplacementMap scale="11" xChannelSelector="R" in="SourceGraphic" />
+        </filter>
+        <pattern id="pattern3" width="1" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(90 50 50)">
+          <line stroke="#FBC32D" stroke-width="1px" y2="10" />
+        </pattern>
+
+      </defs>
+      <rect width="1500" height="1500" style="fill:url(#pattern3);stroke-width:3;stroke:none;filter:url(#filter3)"
+        transform="translate(75,00), rotate(45)" />
+    </svg>
+
+    <hr>
+
+    <svg>
+        <clipPath id="cut-off-bottom">
+            <rect x="0" y="0" width="200" height="100" />
+        </clipPath>
+
+        <filter id="filter4" filterUnits="userSpaceOnUse" x="-5" y="-5" height="200" width="2000">
+            <feTurbulence baseFrequency="0.2" numOctaves="3" type="fractalNoise" />
+            <feDisplacementMap scale="3" xChannelSelector="R" in="SourceGraphic" />
+          </filter>
+          <pattern id="pattern4" width="1" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(90 50 50)">
+            <line stroke="#3D9BF3" stroke-width="1px" y2="10"  />
+          </pattern>
+
+
+  
+        <circle cx="100" cy="120" r="100" clip-path="url(#cut-off-bottom)" fill="url(#pattern4)" filter="url(#filter4)" stroke="#FBC32D" stroke-width="3";/>
+    </svg>
+
+
+
+
+</body>
+
+</html>
