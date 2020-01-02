@@ -1,0 +1,88 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+img {
+  width: 500px;
+  height: 500px;
+}
+
+	/* Outer div - needs to be relative so we can use absolute positioning */
+	.click{
+		position: relative;
+	}
+	/* When clicking outer div, make inner div visible */
+	.click:active .lamp1 { visibility: visible; }
+	/* And hold by staying visible on hover */
+	.lamp:hover {
+		visibility: visible;
+	}
+	/* General settings for popup */
+	.lamp1 {
+		position: absolute;
+		top: -5;
+		visibility: hidden ;
+		z-index: 100;
+		background-color: white;
+		box-shadow: 5px 5px 2px #aaa;
+		border: 1px solid grey;
+		width: 220px;
+		height: 200px;
+	}
+	/* If we want clicking on the popup to close, use this */
+	.lamp1:active {
+		visibility: hidden;	/* Doesn't work because DCEvent is :active as well */
+		height: 0px;
+		width: 0px;
+	}
+
+	.click:active .lamp2 { visibility: hidden; }
+	/* And hold by staying visible on hover */
+	.lamp:hover {
+		visibility: visible;
+	}
+	/* General settings for popup */
+	.lamp2 {
+		position: absolute;
+		top: -5;
+		visibility: visible ;
+		z-index: 100;
+		background-color: white;
+		box-shadow: 5px 5px 2px #aaa;
+		border: 1px solid grey;
+		width: 220px;
+		height: 200px;
+	}
+	/* If we want clicking on the popup to close, use this */
+	.lamp2:active {
+		visibility: ;	/* Doesn't work because DCEvent is :active as well */
+		height: 0px;
+		width: 0px;
+	}
+
+
+</style>
+
+</head>
+
+<body>
+  <button class="click" style="width: 230px; height: 250px;">
+      <img class="lamp1" style="margin-top: 500px" src="./light-on.png" alt="">
+      <img  class="lamp2" style="margin-top: 500px" src="./light-off.png" alt="">
+    </button>
+  <div class="light">
+
+
+
+  </div>
+
+</body>
+
+
+
+
+</html>
