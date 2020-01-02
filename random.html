@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+
+window.onload = function(){
+
+//Generation d'un nombre entre 1 et 10
+const numberToGuess = Math.floor((Math.random() * 10) + 1);
+let tryAgain = 0;
+console.log(numberToGuess);
+
+while (true) {
+  let counter = 0;
+  alert("NEW GAME")
+  while (counter < 3) {
+    //User input
+    const userInput = prompt("Please input a number between 1 & 10 included");
+
+    if (userInput == numberToGuess) {
+      break;
+    }
+    else {
+      counter++;
+    }
+  }
+
+  if (counter == 3) {
+    alert("YOU LOSE")
+    tryAgain = prompt("TRY AGAIN? y/n")
+  }
+  else {
+    alert("YOU WIN")
+    tryAgain = prompt("TRY AGAIN? y/n")
+  }
+
+  if (!(tryAgain == "y")){
+    alert("GAME OVER")
+    break;
+  }
+
+}
+}
+
+</script>
+
+
+
+
+</html>
