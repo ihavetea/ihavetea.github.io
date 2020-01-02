@@ -1,0 +1,56 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+img {
+  width: 500px;
+  height: 500px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+  
+  <img class="switch" src="./switch-off.png" alt="" onclick="">
+
+  <div class="light">
+  <img src="./light-off.png" alt="">
+  
+  <script>
+    window.onload = function () {
+
+      let toggle = document.querySelector(".switch")
+      let tog = 0
+
+      toggle.onclick = function() {
+        if (tog == 0){
+          document.querySelectorAll("img")[0].src="./switch-on.png"
+          document.querySelectorAll("img")[1].src="./light-on.png"
+        tog = 1
+        }
+        else {
+          document.querySelectorAll("img")[0].src="./switch-off.png"
+          document.querySelectorAll("img")[1].src="./light-off.png"
+          tog = 0
+        }
+      }
+
+
+    }
+  </script>
+
+  </div>
+
+</body>
+
+
+
+
+</html>
