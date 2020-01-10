@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<style>
+
+  *{padding:0px; margin: 0px;}
+  
+
+.fill{width:100%;height:100%}
+
+.flex{display: flex;}
+.column{flex-direction: column;}
+.row{flex-direction: row;}
+.jcsb{justify-content: space-between;}
+.jcsa{justify-content: space-around;}
+.jcc{justify-content: center;}
+.aic{align-items: center;}
+
+
+.textwhite{color: #ebdbb2}
+.bgblack{background-color: #3c3836}
+
+html{background-color: #191D20;
+  margin: 3%;
+  position :absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right:0px;
+  }
+
+.reddots{border-width: 3px; border-color: red; border-style: dotted;}
+.navbutton{width: 15%; height: 10%;}
+
+#frame{border-width: 20px; border-color: #ebdbb2; border-style: solid;}
+#nav{width: 100%; height: 20%;}
+#main{width:100%; height:70%}
+#gene{width: 100%; height: 5%;}
+#footer{width:100%; height:10%}
+
+
+@keyframes fadein{
+    0%{width:0%}
+    100%{width:100%}
+    0%{height:0%}
+    100%{height:100%}
+  }
+
+  .fadein{
+    animation:fadein 3s;
+    animation-fill-mode:forwards;
+  }
+
+
+  @keyframes fadeout{
+    0%{opacity:1}
+    100%{opacity:0}
+  }
+
+  .fadeout{
+      animation:fadeout 3s;
+      animation-fill-mode: forwards;
+  }
+
+#hellomynameis{width:50%; height: 20%;}
+#iamdev{width: 30%;height: 12%;}
+#bulb{ width: 5%; height: 5%;}
+#fred{width: 5%; height: 100% ;}
+#legal{width: 20%; height: 100%;}
+</style>
+
+
+<html class="bgblack flex jcc aic">
+
+<body class="fill flex aic jcsa fadein fadein2">
+  <div id="frame" class="fill flex column">
+    
+    <!--NAV------------------------------------------------------------------------------->
+    <div id="nav" class="flex jcc aic reddots">
+      <div class="navbutton reddots"></div>
+      <div class="navbutton reddots"></div>
+      <div class="navbutton reddots"></div>
+      <div class="navbutton reddots"></div>
+      <div class="navbutton reddots"></div>
+    </div>
+
+    <!--MAIN------------------------------------------------------------------------------->
+    <div id="main" class="flex column aic  jcc reddots">
+        <div id="hellomynameis" class="reddots"></div>
+        <div id="iamdev" class="reddots"></div>
+        <div id="bulb" class="reddots"></div>
+    </div>
+
+
+    <div id="gene" class="flex jcc reddots">
+      <div id="fred" class="reddots"></div>
+    </div>
+
+    <!--FOOT------------------------------------------------------------------------------->
+    <div id="footer" class="flex reddots">
+      <div id="legal" class="reddots"></div>
+      <div id="legal" class="reddots"></div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
