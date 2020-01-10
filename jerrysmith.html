@@ -1,5 +1,31 @@
 <!DOCTYPE html>
 
+<script>
+
+window.onload = function(){
+
+
+  let frame = document.querySelector("#frame")
+  let main = document.querySelector("#main")
+  let gene = document.querySelector("#gene")
+  let header = document.querySelector("#header")
+  let footer = document.querySelector("#footer")
+
+  frame.onclick = function(){
+
+    frame.classList.add("expand")
+    main.classList.add("expanddownmain")
+    gene.classList.add("expanddowngene")
+    nav.classList.add("expanddownnav")
+    footer.classList.add("expanddownfooter")
+    
+  }
+}
+
+
+</script>
+
+
 <style>
 
   *{padding:0px; margin: 0px;}
@@ -19,6 +45,9 @@
 .textwhite{color: #ebdbb2}
 .bgblack{background-color: #3c3836}
 
+.w0h0{width: 0px; height: 0px;}
+
+
 html{background-color: #191D20;
   margin: 3%;
   position :absolute;
@@ -31,35 +60,62 @@ html{background-color: #191D20;
 .reddots{border-width: 3px; border-color: red; border-style: dotted;}
 .navbutton{width: 15%; height: 10%;}
 
+
+/*
 #frame{border-width: 20px; border-color: #ebdbb2; border-style: solid;}
 #nav{width: 100%; height: 20%;}
 #main{width:100%; height:70%}
 #gene{width: 100%; height: 5%;}
-#footer{width:100%; height:10%}
+#footer{width:100%; height:10%}*/
+
+#frame{border-width: 20px; border-color: #ebdbb2; border-style: solid;}
+#nav{width: 100%; height: 0%;}
+#main{width:100%; height:0%}
+#gene{width: 100%; height: 0%;}
+#footer{width:100%; height:0%}
 
 
-@keyframes fadein{
+
+@keyframes expand{
     0%{width:0%}
     100%{width:100%}
     0%{height:0%}
-    100%{height:100%}
+    100%{height:100%}    
   }
-
-  .fadein{
-    animation:fadein 3s;
-    animation-fill-mode:forwards;
-  }
+  .expand{animation:expand 3s;animation-fill-mode:forwards;} 
 
 
-  @keyframes fadeout{
-    0%{opacity:1}
-    100%{opacity:0}
+  @keyframes expanddownnav{
+    0%{height:0%}
+    100%{height:20%}    
   }
+  .expanddownnav{animation:expanddownnav 3s;animation-fill-mode:forwards; animation-delay: 3s;} 
 
-  .fadeout{
-      animation:fadeout 3s;
-      animation-fill-mode: forwards;
+  @keyframes expanddownmain{
+    0%{height:0%}
+    100%{height:70%}    
   }
+  .expanddownmain{animation:expanddownmain 3s;animation-fill-mode:forwards; animation-delay: 3s;} 
+  
+  @keyframes expanddowngene{
+    0%{height:0%}
+    100%{height:5%}    
+  }
+  .expanddowngene{animation:expanddowngene 3s;animation-fill-mode:forwards; animation-delay: 3s;} 
+  
+  @keyframes expanddownfooter{
+    0%{height:0%}
+    100%{height:10%}    
+  }
+  .expanddownfooter{animation:expanddownfooter 3s;animation-fill-mode:forwards; animation-delay: 3s;} 
+
+/*
+  @keyframes .expand
+    {0%{border-width: 20px;}
+    100%{border-width: 5px;}}
+  .expand{animation:expand 3s;animation-fill-mode:forwards;} 
+*/
+
 
 #hellomynameis{width:50%; height: 20%;}
 #iamdev{width: 30%;height: 12%;}
@@ -72,7 +128,7 @@ html{background-color: #191D20;
 <html class="bgblack flex jcc aic">
 
 <body class="fill flex aic jcsa fadein fadein2">
-  <div id="frame" class="fill flex column">
+  <div id="frame" class="flex column w0h0">
     
     <!--NAV------------------------------------------------------------------------------->
     <div id="nav" class="flex jcc aic reddots">
@@ -90,6 +146,7 @@ html{background-color: #191D20;
         <div id="bulb" class="reddots"></div>
     </div>
 
+    <!-- SMALL BUTTON --------------------------------------------------------------------->
 
     <div id="gene" class="flex jcc reddots">
       <div id="fred" class="reddots"></div>
